@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Chat Record</title>
+    <link rel="stylesheet" href="/stylee.css"/>
+</head>
+<body>
+    <h2>Edit Your Chat Record</h2>
+    <form method="POST" action="/chats/<%= chat._id %>?_method=PUT">
+        <label for="date">Date:</label>
+        <input type="datetime-local" id="date" name="date" value="<%= chat.Date.toISOString().slice(0, 16) %>" required>
+
+        <label for="temperature">Temperature:</label>
+        <input type="number" id="temperature" name="temperature" value="<%= chat.temperature %>" required>
+
+        <label for="bp">Blood Pressure:</label>
+        <input type="text" id="bp" name="bp" value="<%= chat.bp %>" maxlength="50">
+
+        <label for="bpm">BPM:</label>
+        <input type="number" id="bpm" name="bpm" value="<%= chat.bpm %>" required>
+
+        <button type="submit">Update Chat Record</button>
+    </form>
+</body>
+</html>

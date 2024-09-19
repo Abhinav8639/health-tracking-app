@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Health Record</title>
+    <link rel="stylesheet" href="/newstyle.css"/> 
+</head>
+<body>
+    <h1>Create a New Health Record</h1>
+
+    <form method="POST" action="/chats">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="Date" required><br>
+
+        <label for="temperature">Temperature (°C):</label>
+        <input type="number" id="temperature" name="temperature" step="0.1" placeholder="Enter temperature" required><br>
+
+        <label for="bp">Blood Pressure (Systolic/Diastolic):</label>
+        <input type="text" id="bp" name="bp" placeholder="Enter BP (e.g., 120/80)" required><br>
+
+        <label for="bpm">Heart Rate (BPM):</label>
+        <input type="number" id="bpm" name="bpm" placeholder="Enter heart rate" required><br>
+
+        <button type="submit">Submit Health Record</button>
+    </form>
+</body>
+</html>
